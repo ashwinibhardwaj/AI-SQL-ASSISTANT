@@ -1,4 +1,4 @@
-🧠 AI SQL ASSISTANT\
+🧠 AI SQL ASSISTANT
 
     Natural Language → SQL → Instant Results on Your Database
 
