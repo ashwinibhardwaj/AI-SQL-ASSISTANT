@@ -1,4 +1,4 @@
-#🧠 AI SQL ASSISTANT
+# 🧠 AI SQL ASSISTANT
 
     Natural Language → SQL → Instant Results on Your Database
 
@@ -16,7 +16,7 @@
       
       -> Display results and insights — all from a clean web UI
 
-#⚙️ Tech Stack
+# ⚙️ Tech Stack
 
           Python (Flask) – Web Framework
           
@@ -26,7 +26,7 @@
           
           MySQL – Dynamic Database Execution
 
-#🚀 Setup & Installation
+# 🚀 Setup & Installation
 ## 1. Clone the repo
 git clone https://github.com/<your-username>/AI-SQL-ASSISTANT.git
 cd AI-SQL-ASSISTANT
@@ -40,7 +40,7 @@ source .venv/bin/activate   # macOS/Linux
 ## 3. Install dependencies
 pip install -r requirements.txt
 
-#🧩 Create .env File
+# 🧩 Create .env File
 FLASK_APP=app.py
 UPLOAD_FOLDER=uploads
 HUGGINGFACEHUB_ACCESS_TOCKEN=your_huggingface_api_key
@@ -48,7 +48,7 @@ MYSQL_HOST=localhost
 MYSQL_USER=root
 MYSQL_PASSWORD=yourpassword
 
-#▶️ Run the Application
+# ▶️ Run the Application
 python app.py
 
 
