@@ -17,7 +17,6 @@
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 9999px; }
 
-    /* ✅ Markdown formatting (light theme, readable code) */
     .markdown-content h1, .markdown-content h2, .markdown-content h3 {
       font-weight: 600;
       margin-top: 0.75rem;
@@ -501,7 +500,7 @@ document.addEventListener("DOMContentLoaded", () => {
       botMsg.className = "self-start bg-gray-100 text-gray-800 px-4 py-2 rounded-xl max-w-3xl fade-in shadow markdown-content prose";
       
       if (data.error) {
-        botMsg.innerHTML = `<span class="text-red-600">⚠️ ${data.error}</span>`;
+        botMsg.innerHTML = `<span class="text-red-600">${data.error}</span>`;
       } else if (data.answer) {
         botMsg.innerHTML = marked.parse(data.answer);
       } else if (data.response) {

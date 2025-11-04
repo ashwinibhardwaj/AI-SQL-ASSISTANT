@@ -15,9 +15,6 @@ from tools.query_generator import generate_sql_chain
 from tools.data_reasoner import reason_chain
 
 
-# ======================================================
-# 1. Hugging Face LLM
-# ======================================================
 api_key = os.getenv("HUGGINGFACEHUB_ACCESS_TOCKEN")
 
 llm_endpoint = HuggingFaceEndpoint(
@@ -29,11 +26,7 @@ llm = ChatHuggingFace(llm=llm_endpoint)
 
 
 
-
-# ======================================================
-# 3. Nodes (used by the Graph)
-# ======================================================
-
+# nodes definition
 def node_create_db(state: AgentState) -> AgentState:
     """Create temporary DB from uploaded SQL file."""
     upload_dir = current_app.config.get("UPLOAD_FOLDER", "uploads")
@@ -139,11 +132,7 @@ def has_error(state: AgentState) -> str:
     """Conditional edge: fix SQL if error, else reason."""
     return "fix_sql" if state.get("error") else "reason"
 
-
-# ======================================================
-# 4. LangGraph Workflow Definition
-# ======================================================
-
+# langgraph workflow creation
 graph = StateGraph(AgentState)
 graph.add_node("create_db", node_create_db)
 graph.add_node("generate_sql", node_generate_sql)

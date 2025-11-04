@@ -1,3 +1,5 @@
+# a langgraph workflow without tools uses, runs entirely on single call as a sequential workflow.
+
 import os
 import mysql.connector
 from flask import current_app

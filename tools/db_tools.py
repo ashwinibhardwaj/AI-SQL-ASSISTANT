@@ -2,7 +2,6 @@ import os
 import tempfile
 import mysql.connector
 import subprocess
-import uuid
 import re
 from dotenv import load_dotenv
 
@@ -20,33 +19,31 @@ def create_temp_mysql_db_from_dump(dump_file_path: str) -> dict:
     Loads the dump into it (overwrites any old data if present).
     Returns connection info.
     """
-    # ✅ Use the uploaded filename (without .sql) as DB name
     base_name = os.path.basename(dump_file_path)
     db_name = os.path.splitext(base_name)[0]
-    db_name = re.sub(r"[^0-9a-zA-Z_]", "_", db_name)  # sanitize name
+    db_name = re.sub(r"[^0-9a-zA-Z_]", "_", db_name)  
 
-    # Step 1: Connect to MySQL
+    # connecting to MySQL
     conn = mysql.connector.connect(
         host=MYSQL_HOST, user=MYSQL_USER, password=MYSQL_PASSWORD, port=MYSQL_PORT
     )
     cursor = conn.cursor()
 
-    # Step 2: Check if DB already exists
+    # checking if DB already exists
     cursor.execute("SHOW DATABASES LIKE %s", (db_name,))
     db_exists = cursor.fetchone()
 
     if not db_exists:
-        print(f"📘 Creating new database: {db_name}")
+        print(f"Creating new database: {db_name}")
         cursor.execute(f"CREATE DATABASE `{db_name}`")
         conn.commit()
     else:
-        print(f"♻️ Database {db_name} already exists — reusing it.")
+        print(f"Database {db_name} already exists — reusing it.")
 
     cursor.close()
     conn.close()
 
-    # Step 3: Load the dump into the DB
-    #    Remove any "USE <db>;" lines so it loads into our db_name
+    # loading the dump into the DB
     with open(dump_file_path, "r", encoding="utf-8", errors="ignore") as f:
         dump_content = f.read()
 
@@ -89,7 +86,7 @@ def drop_temp_mysql_db(mysql_config: dict):
     if not db_name:
         return
 
-    print(f"🗑️ Dropping database: {db_name}")
+    print(f"Dropping database: {db_name}")
     conn = mysql.connector.connect(
         host=mysql_config["host"],
         user=mysql_config["user"],
