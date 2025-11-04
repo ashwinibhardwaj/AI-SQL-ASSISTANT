@@ -43,11 +43,11 @@
 
 ## 4 Create .env File
     FLASK_APP=app.py
-    UPLOAD_FOLDER=uploads
     HUGGINGFACEHUB_ACCESS_TOCKEN=your_huggingface_api_key
     MYSQL_HOST=localhost
     MYSQL_USER=root
     MYSQL_PASSWORD=yourpassword
+    MYSQL_PORT = 3306
 
 ## 5 Run the Application
     python app.py
