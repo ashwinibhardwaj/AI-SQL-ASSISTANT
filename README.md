@@ -28,44 +28,45 @@
 
 # 🚀 Setup & Installation
 ## 1. Clone the repo
-git clone https://github.com/<your-username>/AI-SQL-ASSISTANT.git
-cd AI-SQL-ASSISTANT
+    git clone [https://github.com/<your-username>/AI-SQL-ASSISTANT.git](https://github.com/ashwinibhardwaj/AI-SQL-ASSISTANT.git)
+    cd AI-SQL-ASSISTANT
 
 ## 2. Create virtual environment
-python -m venv .venv
-.venv\Scripts\activate      # Windows
+    python -m venv .venv
+    .venv\Scripts\activate      # Windows
  or
-source .venv/bin/activate   # macOS/Linux
+     
+    source .venv/bin/activate   # macOS/Linux
 
 ## 3. Install dependencies
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 # 🧩 Create .env File
-FLASK_APP=app.py
-UPLOAD_FOLDER=uploads
-HUGGINGFACEHUB_ACCESS_TOCKEN=your_huggingface_api_key
-MYSQL_HOST=localhost
-MYSQL_USER=root
-MYSQL_PASSWORD=yourpassword
+    FLASK_APP=app.py
+    UPLOAD_FOLDER=uploads
+    HUGGINGFACEHUB_ACCESS_TOCKEN=your_huggingface_api_key
+    MYSQL_HOST=localhost
+    MYSQL_USER=root
+    MYSQL_PASSWORD=yourpassword
 
 # ▶️ Run the Application
-python app.py
+    python app.py
 
 
 Open your browser and visit:
-👉 http://127.0.0.1:5000
+    👉 http://127.0.0.1:5000
 
-💻 How It Works
+# 💻 How It Works
 
-Upload a .sql dump file
+    ### Upload a .sql dump file
+    
+    ### Ask questions in plain English
+    
+    ### The AI creates a temp database, writes SQL, and executes it
+    
+    ### View results + natural language explanations in the UI
 
-Ask questions in plain English
-
-The AI creates a temp database, writes SQL, and executes it
-
-View results + natural language explanations in the UI
-
-🌟 Key Features
+# 🌟 Key Features
 
 🧠 AI-generated SQL Queries
 
@@ -79,7 +80,7 @@ View results + natural language explanations in the UI
 
 🧩 Built on LangGraph for Agentic Workflow
 
-👩‍💻 Author
+# 👩‍💻 Author
 
 Ashwini Bhardwaj
 AI & LLM Engineer | Building Agentic Systems 🚀
