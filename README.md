@@ -41,7 +41,7 @@
 ## 3. Install dependencies
     pip install -r requirements.txt
 
-# 🧩 Create .env File
+## 4 Create .env File
     FLASK_APP=app.py
     UPLOAD_FOLDER=uploads
     HUGGINGFACEHUB_ACCESS_TOCKEN=your_huggingface_api_key
@@ -49,11 +49,11 @@
     MYSQL_USER=root
     MYSQL_PASSWORD=yourpassword
 
-# ▶️ Run the Application
+## 5 Run the Application
     python app.py
 
 
-Open your browser and visit:
+## 6 Open your browser and visit:
     👉 http://127.0.0.1:5000
 
 # 💻 How It Works
