@@ -17,10 +17,14 @@
       -> Display results and insights — all from a clean web UI
 
 ⚙️ Tech Stack
-  Python (Flask) – Web Framework
-  LangGraph / LangChain – Agentic Reasoning
-  Hugging Face LLM – Query Understanding & Generation
-  MySQL – Dynamic Database Execution
+
+          Python (Flask) – Web Framework
+          
+          LangGraph / LangChain – Agentic Reasoning
+          
+          Hugging Face LLM – Query Understanding & Generation
+          
+          MySQL – Dynamic Database Execution
 
 🚀 Setup & Installation
 # 1. Clone the repo
