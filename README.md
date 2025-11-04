@@ -28,7 +28,7 @@
 
 # 🚀 Setup & Installation
 ## 1. Clone the repo
-    git clone [https://github.com/<your-username>/AI-SQL-ASSISTANT.git](https://github.com/ashwinibhardwaj/AI-SQL-ASSISTANT.git)
+    git clone https://github.com/ashwinibhardwaj/AI-SQL-ASSISTANT.git
     cd AI-SQL-ASSISTANT
 
 ## 2. Create virtual environment
