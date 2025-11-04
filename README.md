@@ -1,31 +1,19 @@
 🧠 AI SQL ASSISTANT
+    Natural Language → SQL → Instant Results on Your Database
 
-Natural Language → SQL → Instant Results on Your Database
-
-An AI-powered web application that lets you query your own databases in plain English.
-Upload a .sql dump, and the app will:
-
-Create a live MySQL database
-
-Generate accurate SQL queries using an LLM (Hugging Face)
-
-Execute them instantly
-
-Fix errors if needed
-
-Display results and insights — all from a clean web UI
+  -> An AI-powered web application that lets you query your own databases in plain English.
+  -> Upload a .sql dump, and the app will:
+  -> Create a live MySQL database
+  -> Generate accurate SQL queries using an LLM (Hugging Face)
+  -> Execute them instantly
+  -> Fix errors if needed
+  -> Display results and insights — all from a clean web UI
 
 ⚙️ Tech Stack
-
-Python (Flask) – Web Framework
-
-LangGraph / LangChain – Agentic Reasoning
-
-Hugging Face LLM – Query Understanding & Generation
-
-MySQL – Dynamic Database Execution
-
-SQLite – Conversation Memory
+  Python (Flask) – Web Framework
+  LangGraph / LangChain – Agentic Reasoning
+  Hugging Face LLM – Query Understanding & Generation
+  MySQL – Dynamic Database Execution
 
 🚀 Setup & Installation
 # 1. Clone the repo
